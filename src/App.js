@@ -5,7 +5,6 @@ import { toast, ToastContainer } from 'react-toastify';
 
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
-import httpService from './services/httpService';
 
 class App extends Component {
   state = {
@@ -31,7 +30,8 @@ class App extends Component {
     // const _index = _posts.indexOf(post);
     // console.log(_posts[_index]);
 
-    const { data } = await http.put(config.apiEndpoint + '/' + post.id, post);
+    // const { data } =
+    await http.put(config.apiEndpoint + '/' + post.id, post);
     post.title = 'UPDATED';
 
     const posts = [...this.state.posts];
